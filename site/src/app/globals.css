@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: #1a1410;
+  --color-bg-card: #241b14;
+  --color-primary: #c8a96a;
+  --color-primary-light: #e0c084;
+  --color-primary-muted: #3d2f1f;
+  --color-accent: #b03a3a;
+  --color-ink: #f5ead4;
+  --color-ink-secondary: #d4c5a3;
+  --color-ink-muted: #8a7a5e;
+  --color-border: #3d2f1f;
+}
+
+html,
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-ink-muted);
+}
+
+/* 自定义滚动条以贴合古典暗色主题 */
+.scroll-area::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.scroll-area::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+
+.scroll-area::-webkit-scrollbar-track {
+  background: transparent;
+}
